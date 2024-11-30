@@ -51,10 +51,10 @@ const drawer = ref(false)
 
 // Itens do menu com ícones e links
 const items = [
-  { text: "Parnaíba", icon: "mdi-map-search", to: "/map" },
+  { text: "Pontos Turísticos", icon: "mdi-google-maps", to: "/map" },
   { text: "Hotéis", icon: "mdi-bed", to: "/hoteis" },
   { text: "Roteiro", icon: "mdi-calendar", to: "/roteiro" },
-  { text: "Restaurantes", icon: "mdi-food", to: "/restaurantes" },
+  { text: "Restaurante", icon: "mdi-food", to: "restaurante" },
   { text: "Feedback", icon: "mdi-comment-quote-outline", to: "/feedback" },
 ]
 
@@ -74,7 +74,7 @@ const toggleDrawer = () => {
 // Função para inicializar o mapa do Leaflet
 onMounted(() => {
   // Criando o mapa
-  const map = L.map('map').setView([-3.120438, -41.779298], 13)  // Coordenadas de Parnaíba, PI (ajuste conforme necessário)
+  const map = L.map('map').setView([-3.120438, -41.779298], 13)  // Coordenadas de Parnaíba, PI
 
   // Adicionando uma camada de tile do OpenStreetMap
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -124,7 +124,7 @@ onMounted(() => {
 
 /* Estilo para o mapa */
 #map {
-  height: 500px;  /* Altura do mapa */
-  width: 100%;    /* Largura total */
+  height: 1000px;  /* Altura do mapa */
+  width: 300%;    /* Largura total */
 }
 </style>
